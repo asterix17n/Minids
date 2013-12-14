@@ -1,0 +1,424 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Minids by asterix17n</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Minids</h1>
+        <p>C library implementing basic data structures like stacks, queues, binary search trees, etc.</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/asterix17n/Minids" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/asterix17n/Minids/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/asterix17n/Minids/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <p>Installation Instructions</p>
+
+<hr><p>Copyright (C) 1994-1996, 1999-2002, 2004-2011 Free Software Foundation,
+Inc.</p>
+
+<p>Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.  This file is offered as-is,
+without warranty of any kind.</p>
+
+<h1>
+<a name="basic-installation" class="anchor" href="#basic-installation"><span class="octicon octicon-link"></span></a>Basic Installation</h1>
+
+<p>Briefly, the shell commands <code>./configure; make; make install' should
+configure, build, and install this package.  The following
+more-detailed instructions are generic; see the</code>README' file for
+instructions specific to this package.  Some packages provide this
+`INSTALL' file but do not implement all of the features documented
+below.  The lack of an optional feature in a given package is not
+necessarily a bug.  More recommendations for GNU packages can be found
+in *note Makefile Conventions: (standards)Makefile Conventions.</p>
+
+<p>The <code>configure' shell script attempts to guess correct values for
+various system-dependent variables used during compilation.  It uses
+those values to create a</code>Makefile' in each directory of the package.
+It may also create one or more <code>.h' files containing system-dependent
+definitions.  Finally, it creates a shell script</code>config.status' that
+you can run in the future to recreate the current configuration, and a
+file <code>config.log' containing compiler output (useful mainly for
+debugging</code>configure').</p>
+
+<p>It can also use an optional file (typically called <code>config.cache'
+and enabled with</code>--cache-file=config.cache' or simply `-C') that saves
+the results of its tests to speed up reconfiguring.  Caching is
+disabled by default to prevent problems with accidental use of stale
+cache files.</p>
+
+<p>If you need to do unusual things to compile the package, please try
+to figure out how <code>configure' could check whether to do them, and mail
+diffs or instructions to the address given in the</code>README' so they can
+be considered for the next release.  If you are using the cache, and at
+some point `config.cache' contains results you don't want to keep, you
+may remove or edit it.</p>
+
+<p>The file <code>configure.ac' (or</code>configure.in') is used to create
+<code>configure' by a program called</code>autoconf'.  You need <code>configure.ac' if
+you want to change it or regenerate</code>configure' using a newer version
+of `autoconf'.</p>
+
+<p>The simplest way to compile this package is:</p>
+
+<ol>
+<li>
+<p><code>cd' to the directory containing the package's source code and type
+</code>./configure' to configure the package for your system.</p>
+
+<p>Running `configure' might take a while.  While running, it prints
+ some messages telling which features it is checking for.</p>
+</li>
+<li><p>Type `make' to compile the package.</p></li>
+<li><p>Optionally, type `make check' to run any self-tests that come with
+ the package, generally using the just-built uninstalled binaries.</p></li>
+<li><p>Type <code>make install' to install the programs and any data files and
+ documentation.  When installing into a prefix owned by root, it is
+ recommended that the package be configured and built as a regular
+ user, and only the</code>make install' phase executed with root
+ privileges.</p></li>
+<li><p>Optionally, type <code>make installcheck' to repeat any self-tests, but
+ this time using the binaries in their final installed location.
+ This target does not install anything.  Running this target as a
+ regular user, particularly if the prior</code>make install' required
+ root privileges, verifies that the installation completed
+ correctly.</p></li>
+<li><p>You can remove the program binaries and object files from the
+ source code directory by typing <code>make clean'.  To also remove the
+ files that</code>configure' created (so you can compile the package for
+ a different kind of computer), type <code>make distclean'.  There is
+ also a</code>make maintainer-clean' target, but that is intended mainly
+ for the package's developers.  If you use it, you may have to get
+ all sorts of other programs in order to regenerate files that came
+ with the distribution.</p></li>
+<li><p>Often, you can also type `make uninstall' to remove the installed
+ files again.  In practice, not all packages have tested that
+ uninstallation works correctly, even though it is required by the
+ GNU Coding Standards.</p></li>
+<li><p>Some packages, particularly those that use Automake, provide <code>make
+ distcheck', which can by used by developers to test that all other
+ targets like</code>make install' and `make uninstall' work correctly.
+ This target is generally not run by end users.</p></li>
+</ol><h1>
+<a name="compilers-and-options" class="anchor" href="#compilers-and-options"><span class="octicon octicon-link"></span></a>Compilers and Options</h1>
+
+<p>Some systems require unusual options for compilation or linking that
+the <code>configure' script does not know about.  Run</code>./configure --help'
+for details on some of the pertinent environment variables.</p>
+
+<p>You can give `configure' initial values for configuration parameters
+by setting variables in the command line or in the environment.  Here
+is an example:</p>
+
+<pre><code> ./configure CC=c99 CFLAGS=-g LIBS=-lposix
+</code></pre>
+
+<p>*Note Defining Variables::, for more details.</p>
+
+<h1>
+<a name="compiling-for-multiple-architectures" class="anchor" href="#compiling-for-multiple-architectures"><span class="octicon octicon-link"></span></a>Compiling For Multiple Architectures</h1>
+
+<p>You can compile the package for more than one kind of computer at the
+same time, by placing the object files for each architecture in their
+own directory.  To do this, you can use GNU <code>make'.</code>cd' to the
+directory where you want the object files and executables to go and run
+the <code>configure' script.</code>configure' automatically checks for the
+source code in the directory that <code>configure' is in and in</code>..'.  This
+is known as a "VPATH" build.</p>
+
+<p>With a non-GNU <code>make', it is safer to compile the package for one
+architecture at a time in the source code directory.  After you have
+installed the package for one architecture, use</code>make distclean' before
+reconfiguring for another architecture.</p>
+
+<p>On MacOS X 10.5 and later systems, you can create libraries and
+executables that work on multiple system types--known as "fat" or
+"universal" binaries--by specifying multiple <code>-arch' options to the
+compiler but only a single</code>-arch' option to the preprocessor.  Like
+this:</p>
+
+<pre><code> ./configure CC="gcc -arch i386 -arch x86_64 -arch ppc -arch ppc64" \
+             CXX="g++ -arch i386 -arch x86_64 -arch ppc -arch ppc64" \
+             CPP="gcc -E" CXXCPP="g++ -E"
+</code></pre>
+
+<p>This is not guaranteed to produce working output in all cases, you
+may have to build one architecture at a time and combine the results
+using the `lipo' tool if you have problems.</p>
+
+<h1>
+<a name="installation-names" class="anchor" href="#installation-names"><span class="octicon octicon-link"></span></a>Installation Names</h1>
+
+<p>By default, <code>make install' installs the package's commands under
+</code>/usr/local/bin', include files under <code>/usr/local/include', etc.  You
+can specify an installation prefix other than</code>/usr/local' by giving
+<code>configure' the option</code>--prefix=PREFIX', where PREFIX must be an
+absolute file name.</p>
+
+<p>You can specify separate installation prefixes for
+architecture-specific files and architecture-independent files.  If you
+pass the option <code>--exec-prefix=PREFIX' to</code>configure', the package uses
+PREFIX as the prefix for installing programs and libraries.
+Documentation and other data files still use the regular prefix.</p>
+
+<p>In addition, if you use an unusual directory layout you can give
+options like <code>--bindir=DIR' to specify different values for particular
+kinds of files.  Run</code>configure --help' for a list of the directories
+you can set and what kinds of files go in them.  In general, the
+default for these options is expressed in terms of <code>${prefix}', so that
+specifying just</code>--prefix' will affect all of the other directory
+specifications that were not explicitly provided.</p>
+
+<p>The most portable way to affect installation locations is to pass the
+correct locations to <code>configure'; however, many packages provide one or
+both of the following shortcuts of passing variable assignments to the
+</code>make install' command line to change installation locations without
+having to reconfigure or recompile.</p>
+
+<p>The first method involves providing an override variable for each
+affected directory.  For example, <code>make install
+prefix=/alternate/directory' will choose an alternate location for all
+directory configuration variables that were expressed in terms of
+</code>${prefix}'.  Any directories that were specified during <code>configure',
+but not in terms of</code>${prefix}', must each be overridden at install
+time for the entire installation to be relocated.  The approach of
+makefile variable overrides for each directory variable is required by
+the GNU Coding Standards, and ideally causes no recompilation.
+However, some platforms have known limitations with the semantics of
+shared libraries that end up requiring recompilation when using this
+method, particularly noticeable in packages that use GNU Libtool.</p>
+
+<p>The second method involves providing the <code>DESTDIR' variable.  For
+example,</code>make install DESTDIR=/alternate/directory' will prepend
+<code>/alternate/directory' before all installation names.  The approach of
+</code>DESTDIR' overrides is not required by the GNU Coding Standards, and
+does not work on platforms that have drive letters.  On the other hand,
+it does better at avoiding recompilation issues, and works well even
+when some directory options were not specified in terms of <code>${prefix}'
+at</code>configure' time.</p>
+
+<h1>
+<a name="optional-features" class="anchor" href="#optional-features"><span class="octicon octicon-link"></span></a>Optional Features</h1>
+
+<p>If the package supports it, you can cause programs to be installed
+with an extra prefix or suffix on their names by giving <code>configure' the
+option</code>--program-prefix=PREFIX' or `--program-suffix=SUFFIX'.</p>
+
+<p>Some packages pay attention to <code>--enable-FEATURE' options to
+</code>configure', where FEATURE indicates an optional part of the package.
+They may also pay attention to <code>--with-PACKAGE' options, where PACKAGE
+is something like</code>gnu-as' or <code>x' (for the X Window System).  The
+</code>README' should mention any <code>--enable-' and</code>--with-' options that the
+package recognizes.</p>
+
+<p>For packages that use the X Window System, <code>configure' can usually
+find the X include and library files automatically, but if it doesn't,
+you can use the</code>configure' options <code>--x-includes=DIR' and
+</code>--x-libraries=DIR' to specify their locations.</p>
+
+<p>Some packages offer the ability to configure how verbose the
+execution of <code>make' will be.  For these packages, running</code>./configure
+--enable-silent-rules' sets the default to minimal output, which can be
+overridden with <code>make V=1'; while running</code>./configure
+--disable-silent-rules' sets the default to verbose, which can be
+overridden with `make V=0'.</p>
+
+<h1>
+<a name="particular-systems" class="anchor" href="#particular-systems"><span class="octicon octicon-link"></span></a>Particular systems</h1>
+
+<p>On HP-UX, the default C compiler is not ANSI C compatible.  If GNU
+CC is not installed, it is recommended to use the following options in
+order to use an ANSI C compiler:</p>
+
+<pre><code> ./configure CC="cc -Ae -D_XOPEN_SOURCE=500"
+</code></pre>
+
+<p>and if that doesn't work, install pre-built binaries of GCC for HP-UX.</p>
+
+<p>HP-UX <code>make' updates targets which have the same time stamps as
+their prerequisites, which makes it generally unusable when shipped
+generated files such as</code>configure' are involved.  Use GNU `make'
+instead.</p>
+
+<p>On OSF/1 a.k.a. Tru64, some versions of the default C compiler cannot
+parse its <code>&lt;wchar.h&gt;' header file.  The option</code>-nodtk' can be used as
+a workaround.  If GNU CC is not installed, it is therefore recommended
+to try</p>
+
+<pre><code> ./configure CC="cc"
+</code></pre>
+
+<p>and if that doesn't work, try</p>
+
+<pre><code> ./configure CC="cc -nodtk"
+</code></pre>
+
+<p>On Solaris, don't put <code>/usr/ucb' early in your</code>PATH'.  This
+directory contains several dysfunctional programs; working variants of
+these programs are available in <code>/usr/bin'.  So, if you need</code>/usr/ucb'
+in your <code>PATH', put it _after_</code>/usr/bin'.</p>
+
+<p>On Haiku, software installed for all users goes in <code>/boot/common',
+not</code>/usr/local'.  It is recommended to use the following options:</p>
+
+<pre><code> ./configure --prefix=/boot/common
+</code></pre>
+
+<h1>
+<a name="specifying-the-system-type" class="anchor" href="#specifying-the-system-type"><span class="octicon octicon-link"></span></a>Specifying the System Type</h1>
+
+<p>There may be some features <code>configure' cannot figure out
+automatically, but needs to determine by the type of machine the package
+will run on.  Usually, assuming the package is built to be run on the
+_same_ architectures,</code>configure' can figure that out, but if it prints
+a message saying it cannot guess the machine type, give it the
+<code>--build=TYPE' option.  TYPE can either be a short name for the system
+type, such as</code>sun4', or a canonical name which has the form:</p>
+
+<pre><code> CPU-COMPANY-SYSTEM
+</code></pre>
+
+<p>where SYSTEM can have one of these forms:</p>
+
+<pre><code> OS
+ KERNEL-OS
+</code></pre>
+
+<p>See the file <code>config.sub' for the possible values of each field.  If
+</code>config.sub' isn't included in this package, then this package doesn't
+need to know the machine type.</p>
+
+<p>If you are <em>building</em> compiler tools for cross-compiling, you should
+use the option `--target=TYPE' to select the type of system they will
+produce code for.</p>
+
+<p>If you want to <em>use</em> a cross compiler, that generates code for a
+platform different from the build platform, you should specify the
+"host" platform (i.e., that on which the generated programs will
+eventually be run) with `--host=TYPE'.</p>
+
+<h1>
+<a name="sharing-defaults" class="anchor" href="#sharing-defaults"><span class="octicon octicon-link"></span></a>Sharing Defaults</h1>
+
+<p>If you want to set default values for <code>configure' scripts to share,
+you can create a site shell script called</code>config.site' that gives
+default values for variables like <code>CC',</code>cache_file', and <code>prefix'.
+</code>configure' looks for <code>PREFIX/share/config.site' if it exists, then
+</code>PREFIX/etc/config.site' if it exists.  Or, you can set the
+<code>CONFIG_SITE' environment variable to the location of the site script.
+A warning: not all</code>configure' scripts look for a site script.</p>
+
+<h1>
+<a name="defining-variables" class="anchor" href="#defining-variables"><span class="octicon octicon-link"></span></a>Defining Variables</h1>
+
+<p>Variables not defined in a site shell script can be set in the
+environment passed to <code>configure'.  However, some packages may run
+configure again during the build, and the customized values of these
+variables may be lost.  In order to avoid this problem, you should set
+them in the</code>configure' command line, using `VAR=value'.  For example:</p>
+
+<pre><code> ./configure CC=/usr/local2/bin/gcc
+</code></pre>
+
+<p>causes the specified `gcc' to be used as the C compiler (unless it is
+overridden in the site shell script).</p>
+
+<p>Unfortunately, this technique does not work for `CONFIG_SHELL' due to
+an Autoconf bug.  Until the bug is fixed you can use this workaround:</p>
+
+<pre><code> CONFIG_SHELL=/bin/bash /bin/bash ./configure CONFIG_SHELL=/bin/bash
+</code></pre>
+
+<h1>
+<a name="configure-invocation" class="anchor" href="#configure-invocation"><span class="octicon octicon-link"></span></a>`configure' Invocation</h1>
+
+<p>`configure' recognizes the following options to control how it
+operates.</p>
+
+<p><code>--help'
+</code>-h'
+     Print a summary of all of the options to `configure', and exit.</p>
+
+<p><code>--help=short'
+</code>--help=recursive'
+     Print a summary of the options unique to this package's
+     <code>configure', and exit.  The</code>short' variant lists options used
+     only in the top level, while the `recursive' variant lists options
+     also present in any nested packages.</p>
+
+<p><code>--version'
+</code>-V'
+     Print the version of Autoconf used to generate the `configure'
+     script, and exit.</p>
+
+<p><code>--cache-file=FILE'
+     Enable the cache: use and save the results of the tests in FILE,
+     traditionally</code>config.cache'.  FILE defaults to `/dev/null' to
+     disable caching.</p>
+
+<p><code>--config-cache'
+</code>-C'
+     Alias for `--cache-file=config.cache'.</p>
+
+<p><code>--quiet'
+</code>--silent'
+<code>-q'
+     Do not print messages saying which checks are being made.  To
+     suppress all normal output, redirect it to</code>/dev/null' (any error
+     messages will still be shown).</p>
+
+<p><code>--srcdir=DIR'
+     Look for the package's source code in directory DIR.  Usually
+</code>configure' can determine that directory automatically.</p>
+
+<p>`--prefix=DIR'
+     Use DIR as the installation prefix.  *note Installation Names::
+     for more details, including other options available for fine-tuning
+     the installation locations.</p>
+
+<p><code>--no-create'
+</code>-n'
+     Run the configure checks, but stop before creating any output
+     files.</p>
+
+<p><code>configure' also accepts some other, not widely useful, options.  Run
+</code>configure --help' for more details.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/asterix17n">asterix17n</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
