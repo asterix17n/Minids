@@ -13,13 +13,13 @@ Minids Facebook Page
 https://www.facebook.com/pages/Minids/427191397406905
 
 
-﻿Building & Installing Minids
+Building & Installing Minids
 ==============================
 
-To build and install Minids type the following commands, 
-	$ ./configure 
-	$ ./make
-	$ ./make install
+To build and install Minids type the following commands
+	 ./configure 
+	 ./make
+	 ./make install
 
 
 License
