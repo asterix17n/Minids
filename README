@@ -17,9 +17,9 @@ https://www.facebook.com/pages/Minids/427191397406905
 ==============================
 
 To build and install Minids type the following commands, 
-	./configure 
-	./make
-	./make install
+	$ ./configure 
+	$ ./make
+	$ ./make install
 
 
 License
